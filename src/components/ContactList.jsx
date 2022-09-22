@@ -1,8 +1,12 @@
 import React from 'react'
 
-function ContactList() {
+function ContactList(props) {
+  console.log(props)
+
+  
+
   return (
-    <div>ContactList</div>
+    <div className='ui celled list'>ContactList</div>
   )
 }
 
