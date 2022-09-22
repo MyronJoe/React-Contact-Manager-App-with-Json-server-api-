@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.center{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.addcontact{
+  margin-top: 1.5em;
+}

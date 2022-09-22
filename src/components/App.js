@@ -1,7 +1,8 @@
 import React from 'react';
 import AddContact from './AddContact';
 import './App.css';
-import Contact from './Contact';
+import ContactCard from './ContactCard';
+import ContactList from './ContactList';
 import Header from './Header';
 import Home from './Home';
 
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <Home />
       <AddContact />
-      <Contact />
+      <ContactCard />
+      <ContactList />
     </>
   );
 }
