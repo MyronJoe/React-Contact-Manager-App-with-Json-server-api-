@@ -11,3 +11,14 @@
 .addcontact{
   margin-top: 2em;
 }
+.item1{
+  display: flex !important;
+  justify-content: space-between !important;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.icon{
+  padding-top: 10px;
+  color: red;
+}
