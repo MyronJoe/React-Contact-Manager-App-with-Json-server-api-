@@ -21,10 +21,14 @@
 .icon{
   padding-top: 10px;
   color: red;
+  cursor: pointer;
 }
 .content{
   display: flex;
 }
 .content img{
   margin: 5px 20px 0 0;
+}
+.id{
+  display: none;
 }
