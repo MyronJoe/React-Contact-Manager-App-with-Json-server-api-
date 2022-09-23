@@ -19,6 +19,6 @@ function ContactCard(props) {
       ></i>
     </div>
   )
-}
+};
 
 export default ContactCard

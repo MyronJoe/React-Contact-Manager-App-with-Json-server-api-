@@ -14,7 +14,7 @@ function App() {
   const addContactHandler = (contact) => {
     // console.log(contact)
     setcontacts([...contacts, {id : v4(), ...contact }])
-  }
+  };
 
   const removeContactHandler = (id) => {
     const newContactList = contacts.filter((contact) => {
@@ -22,7 +22,7 @@ function App() {
     })
 
     setcontacts(newContactList)
-  }
+  };
 
   useEffect(() => {
     const retrivecontacts = JSON.parse(localStorage.getItem('contacts'))
