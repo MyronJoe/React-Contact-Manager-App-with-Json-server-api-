@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AddContact from './AddContact';
 import './App.css';
 // import ContactCard from './ContactCard';
@@ -8,25 +8,7 @@ import Home from './Home';
 
 function App() {
 
-  const contacts =[
-    {
-      id:1,
-      name:'Joseph',
-      email:'Joe@gmail.com'
-    },
-    {
-      id:3,
-      name:'Oluebube',
-      email:'Goddy@gmail.com'
-    },
-    {
-      id:2,
-      name:'Alex',
-      email:'Alex@gmail.com'
-    }
-  ]
-
-
+  const [contacts, setcontacts] = useState([])
 
   return (
     <div className='ui container'>
