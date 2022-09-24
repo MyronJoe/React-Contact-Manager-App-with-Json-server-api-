@@ -12,7 +12,7 @@ function ContactCard(props) {
         <div>
         <div className="header">{name}</div>
         <div>{email}</div>
-        <div className='id'>{id}</div>
+        {/* <div className='id'>{id}</div> */}
         </div>
       </div>
       <i className='trash alternate outline icon'

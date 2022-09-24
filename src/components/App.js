@@ -42,26 +42,9 @@ function App() {
         <Routes>
           <Route path="/" element={<ContactList  contacts={contacts} getContactId={removeContactHandler}/>} />
         
-          <Route path='/add' element={<AddContact addContactHandler={addContactHandler} />} />
-
-
-          {/* <Route path="/" 
-          render={
-            <AddContact addContactHandler={addContactHandler} />
-          }
-          />
-          <Route path="/add" 
-          render={
-            <ContactList  contacts={contacts} getContactId={removeContactHandler}/>
-          }
-          /> */}
+          <Route path='/add' element={<AddContact addContactHandler={addContactHandler}/>} />
         </Routes>
       </BrowserRouter>
-
-
-      {/* <AddContact addContactHandler={addContactHandler}/> */}
-      {/* <ContactCard /> */}
-      {/* <ContactList  contacts={contacts} getContactId={removeContactHandler}/> */}
     </div>
   );
 }

@@ -1,41 +1,35 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
 class AddContact extends React.Component{
   
   state = {
     name: '',
-    email:''
+    email:'',
   };
-
-  // history = useNavigate();
 
   add = (e) => {
     e.preventDefault()
-
     if(this.state.name === '' || this.state.email === ''){
       alert('All inputs must be filled')
-      return
-    };
-    
-
-    // console.log(this.state)
-    this.props.addContactHandler(this.state)
-    this.setState({name:'', email:''})
-    // this.props.history.push('/')
-    console.log(this.props)
-    // this.history('/')
+      return;
+    }else{
+      this.props.addContactHandler(this.state);
+      this.setState({name:'', email:''})
+      console.log(this.props) 
+    }
   };
   
   render(){
     return(
-
       <div className='ui main addcontact'>
-        <h2>Add Contact</h2>
-
+        <h1 className='chead'>Add Contact
+      
+        <Link to='/'><button className='ui button blue right'>All Contacts</button></Link>
+        
+        </h1>
         <form action="" className='ui form' onSubmit={this.add}>
-
           <div className='field'>
             <label htmlFor="">Name</label>
             <input type="text" name='name' value={this.state.name} placeholder='Name' onChange={ (e) => this.setState({name: e.target.value})}/>
@@ -47,11 +41,8 @@ class AddContact extends React.Component{
           <button className='ui button blue'>Add</button>
         </form>
       </div>
-
     );
   };
-
-
 };
 
 

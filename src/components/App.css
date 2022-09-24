@@ -33,8 +33,11 @@
   visibility: hidden;
   display: none;
 }
-.head{
+.head, .chead{
   padding-top: 2.4em;
   display: flex;
   justify-content: space-between;
+}
+.chead{
+  padding-top: 1em;
 }
