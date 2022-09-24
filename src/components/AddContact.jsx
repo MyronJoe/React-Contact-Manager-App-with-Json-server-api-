@@ -1,12 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 class AddContact extends React.Component{
-
+  
   state = {
     name: '',
     email:''
   };
+
+  // history = useNavigate();
 
   add = (e) => {
     e.preventDefault()
@@ -15,11 +18,16 @@ class AddContact extends React.Component{
       alert('All inputs must be filled')
       return
     };
+    
 
     // console.log(this.state)
     this.props.addContactHandler(this.state)
     this.setState({name:'', email:''})
+    // this.props.history.push('/')
+    console.log(this.props)
+    // this.history('/')
   };
+  
   render(){
     return(
 
