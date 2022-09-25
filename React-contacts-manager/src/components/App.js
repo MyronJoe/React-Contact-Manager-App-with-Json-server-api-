@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import {v4} from 'uuid';
 import AddContact from './AddContact';
 import './App.css';
+import api from '../api/contacts'
 import ContactDetail from './ContactDetail';
 import ContactList from './ContactList';
 import Header from './Header';
@@ -10,6 +11,13 @@ import Header from './Header';
 function App() {
 
   const [contacts, setcontacts] = useState([])
+
+  //Retrive contacts
+  const RetriveContacts = async () => {
+    const response = await api.get("/contacts")
+
+    return response.data
+  }
 
   const addContactHandler = (contact) => {
     // console.log(contact)
@@ -25,12 +33,20 @@ function App() {
   };
 
   useEffect(() => {
-    const retrivecontacts = JSON.parse(localStorage.getItem('contacts'))
-    if (retrivecontacts)setcontacts(retrivecontacts)
+
+    const getAllContacts = async () => {
+        const allContacts = await RetriveContacts()
+        if(allContacts) setcontacts(allContacts)
+    }
+
+    // const retrivecontacts = JSON.parse(localStorage.getItem('contacts'))
+    // if (retrivecontacts)setcontacts(retrivecontacts)
+
+    getAllContacts()
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts))
+    // localStorage.setItem('contacts', JSON.stringify(contacts))
   }, [contacts])
 
   return (
