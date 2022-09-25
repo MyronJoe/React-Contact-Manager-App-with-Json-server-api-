@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import user from '../images/user.jpg'
 
 function ContactCard(props) {
-  // console.log(props.contact)
+  console.log(props.contact)
   const {id, name, email} = props.contact;
   return (
     
@@ -14,8 +14,7 @@ function ContactCard(props) {
         <div>
         <Link to={{
           pathname:`/contact/${id}`,
-          state:{contact: props.contact}
-          }}>
+          state:{contact: props.contact}}}>
           <div className="header">{name}</div>
           <div>{email}</div>
         </Link>

@@ -4,7 +4,6 @@ import {v4} from 'uuid';
 import AddContact from './AddContact';
 import './App.css';
 import ContactDetail from './ContactDetail';
-// import ContactCard from './ContactCard';
 import ContactList from './ContactList';
 import Header from './Header';
 
@@ -46,6 +45,7 @@ function App() {
           <Route path='/add' element={<AddContact addContactHandler={addContactHandler}/>} />
 
           <Route path='/contact/:id' element={<ContactDetail/>} />
+
         </Routes>
       </BrowserRouter>
     </div>
