@@ -21,9 +21,16 @@ function ContactCard(props) {
         {/* <div className='id'>{id}</div> */}
         </div>
       </div>
+      <div>
+      <Link to={{pathname:`/edit/${id}`, state:{contact: props.contact}}}>
+        <i className='edit alternate outline icon icon2'
+        ></i>
+      </Link>
+      
       <i className='trash alternate outline icon'
         onClick={() => props.clickHandler(id)}
       ></i>
+      </div>
     </div>
   )
 };

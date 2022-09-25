@@ -1,16 +1,19 @@
 {
-    "contacts":
-        [
-            {
-              "id": "fe8c08d5-f7af-4f3d-ae23-eeed0f230c4e",
-              "name": "Joseph",
-              "email": "josephonyekachi77@gmail.com"
-            },
-            {
-              "id": "aa3d21e7-de76-4616-b7bc-aa0cedb47e12",
-              "name": "Joseph",
-              "email": "josephonyekachi77@gmail.com"
-            }
-        ]
-    
+  "contacts": [
+    {
+      "id": "aa3d21e7-de76-4616-b7bc-aa0cedb47e12",
+      "name": "Joseph",
+      "email": "josephonyekachi77@gmail.com"
+    },
+    {
+      "id": "be7d9899-43dc-4613-89e0-40232c1a5eb9",
+      "name": "mike",
+      "email": "josephonyekachi77@gmail.com"
+    },
+    {
+      "id": "8ac004fd-cc95-41d7-8676-7a99ee4e4ce5",
+      "name": "Joseph",
+      "email": "josephonyekachi77@gmail.com"
+    }
+  ]
 }

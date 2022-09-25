@@ -7,6 +7,7 @@ import api from '../api/contacts'
 import ContactDetail from './ContactDetail';
 import ContactList from './ContactList';
 import Header from './Header';
+import EditContact from './EditContact';
 
 function App() {
 
@@ -19,12 +20,25 @@ function App() {
     return response.data
   }
 
-  const addContactHandler = (contact) => {
+  const addContactHandler = async (contact) => {
     // console.log(contact)
-    setcontacts([...contacts, {id : v4(), ...contact }])
+
+    const request = {
+      id: v4(),
+      ...contact
+    }
+
+    const response = await api.post("/contacts", request)
+    setcontacts([...contacts, response.data])
   };
 
-  const removeContactHandler = (id) => {
+  const UpdateContactHandler = async (contact) =>{
+    
+  }
+
+  const removeContactHandler = async (id) => {
+
+    await api.delete(`/contacts/${id}`)
     const newContactList = contacts.filter((contact) => {
       return contact.id !== id
     })
@@ -56,11 +70,13 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<ContactList  contacts={contacts} getContactId={removeContactHandler}/>} />
+          <Route path="/" element={<ContactList contacts={contacts} getContactId={removeContactHandler}/>} />
         
           <Route path='/add' element={<AddContact addContactHandler={addContactHandler}/>} />
 
           <Route path='/contact/:id' element={<ContactDetail/>} />
+
+          <Route path='/edit/:id' element={<EditContact UpdateContactHandler={UpdateContactHandler}/>} />
 
         </Routes>
       </BrowserRouter>

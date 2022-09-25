@@ -18,11 +18,17 @@
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
-.icon{
-  padding-top: 10px;
-  color: red;
-  cursor: pointer;
-}
+  .icon{
+    padding-top: 10px;
+    color: red;
+    cursor: pointer;
+  }
+  .icon2{
+    padding-top: 10px;
+    color: blue;
+    cursor: pointer;
+    margin-right: 10px;
+  }
 .content{
   display: flex;
 }
