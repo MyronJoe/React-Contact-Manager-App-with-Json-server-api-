@@ -2,17 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
+
 class EditContact extends React.Component{
   
   constructor(props) {
     super(props)
-    const {id, name, email} = props.location.state.contact;
+    const {id, name, email} = props
     this.state = {
       id,
       name,
       email
     }
   }
+
+
 
   update = (e) => {
     e.preventDefault()
